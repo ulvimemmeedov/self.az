@@ -1,0 +1,77 @@
+
+.img img{
+    width: 100%;
+    max-width: 120px;
+    margin-top: 38px;
+}
+
+.nav-bar ul{
+    display: flex;
+    margin-top: 36px;
+}
+
+.nav-bar ul li{
+    box-sizing: border-box;
+    padding: 18px;
+    list-style-type: none;
+}
+
+.nav-bar ul li a{
+    text-align: left;
+    font: normal normal 800 20px/20px Montserrat;
+    letter-spacing: 3px;
+    color: #000000;
+    font-size: 12px;
+    margin-left: 34px;
+    text-decoration: none;
+}
+
+.footer-down{
+    margin-top: 90px;
+    height: 65px;
+    background: #131E32 0% 0% no-repeat padding-box;
+    opacity: 1; 
+}
+
+.footer-down-title{
+    color: #e1e4e7;
+    font: normal normal 14px/56px Montserrat;
+    margin-left: 50px;
+} 
+.footer-down-right{
+    position: relative;
+    left: 36%;
+}
+
+.footer-down-right ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.footer-down-right ul li{
+    padding: 16px;
+}
+
+.footer-down-right ul li a{
+    text-decoration: none;
+    color: #e1e4e7;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.brand-section-title{
+    font-size: 70px;
+    font-weight: 700;
+    letter-spacing: -3px;
+    position:absolute;
+    left:10px;
+    top:10px;
+    width: 500px;
+}
+.brand-section img{
+    width: 100%;
+    height: 100%;
+}
+.brand-section{
+    position:relative;
+}
