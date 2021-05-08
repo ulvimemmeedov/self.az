@@ -1466,7 +1466,7 @@ pre code {
     .col-lg-6 {
         -ms-flex: 0 0 20%;
         flex: 0 0 20%;
-        max-width: 20%
+        /* max-width: 20% */
     }
     .col-lg-7 {
         -ms-flex: 0 0 58.333333%;

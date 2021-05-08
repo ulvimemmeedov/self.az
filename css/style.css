@@ -1,34 +1,35 @@
 
 .img img{
     width: 100%;
-    max-width: 120px;
-    margin-top: 38px;
+    max-width: 122px;
+    margin-top: 42px;
 }
 
 .nav-bar ul{
     display: flex;
     margin-top: 36px;
+    margin-left: 69px;
 }
 
 .nav-bar ul li{
     box-sizing: border-box;
-    padding: 18px;
+    padding: 15px;
     list-style-type: none;
 }
 
 .nav-bar ul li a{
     text-align: left;
     font: normal normal 800 20px/20px Montserrat;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     color: #000000;
-    font-size: 12px;
-    margin-left: 34px;
+    font-size: 14px;
+    margin-left: 18px;
     text-decoration: none;
 }
 
 .footer-down{
-    margin-top: 90px;
-    height: 65px;
+    margin-top: 165px;
+    height: 64px;
     background: #131E32 0% 0% no-repeat padding-box;
     opacity: 1; 
 }
@@ -37,10 +38,11 @@
     color: #e1e4e7;
     font: normal normal 14px/56px Montserrat;
     margin-left: 50px;
+    margin-top: 2px;
 } 
 .footer-down-right{
     position: relative;
-    left: 36%;
+    left: 30%;
 }
 
 .footer-down-right ul{
@@ -49,29 +51,191 @@
 }
 
 .footer-down-right ul li{
-    padding: 16px;
+    padding: 17px;
 }
 
 .footer-down-right ul li a{
     text-decoration: none;
     color: #e1e4e7;
-    font-size: 13px;
     font-weight: 500;
+    font: normal normal normal 13px/21px Roboto;
 }
 
 .brand-section-title{
-    font-size: 70px;
+    font-size: 67px;
     font-weight: 700;
     letter-spacing: -3px;
     position:absolute;
     left:10px;
     top:10px;
-    width: 500px;
+    width: 250px;
 }
+
 .brand-section img{
     width: 100%;
     height: 100%;
 }
+
 .brand-section{
     position:relative;
+    margin-top: 16px;
+}
+
+.product-title h1{
+    font-weight: 700;
+    margin-top: 62px;
+    font-size: 44px;
+    letter-spacing: -3px;
+}
+
+.product-image{
+    display: inline-block;
+}
+
+.product-image:hover{
+        
+}
+
+.product-image img{
+    width: 531px;
+    height: 80px;
+    margin-top: 8px;
+}
+
+.product-item{
+    margin-left: 45px;
+}
+
+.product-item h1{
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.product-item p{
+    font-size: 16px;
+    line-height: 14px;
+    letter-spacing: -1px;
+    font-weight: 600;
+    margin-top: 18px;
+    color: #969494;
+}
+
+.product-image2{
+    margin-left: 63px;
+}
+
+.product-image2 img{
+    width: 523px;
+}
+
+.product-item2 h1{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.product-item2 p{
+    font-size: 16px;
+    line-height: 14px;
+    font-weight: 600;
+    margin-top: 18px;
+    color: #969494;
+    letter-spacing: -1px;
+}
+
+.product2{
+    margin-top: 130px;
+}
+
+.product3{
+    margin-top: 130px;
+}
+
+.product-image3 img{
+    width: 531px;
+    height: 80px;
+    margin-top: 8px;
+}
+
+.product-item3 h1{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.product-item3 p{
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+    margin-top: 18px;
+    color: #969494;
+    letter-spacing: -1px;
+}
+
+.product-item3{
+    margin-left: 45px;
+    margin-top: 10px;
+}
+
+.portfolio h1{
+    text-align: center;
+    font: normal normal bold 38px/50px Roboto;
+    letter-spacing: 1.9px;
+    color: #000000;
+    opacity: 1;
+    font-size: 23px;
+    margin-top: 160px;
+    padding-left: 190px;
+}
+
+.about img{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.about-text h1{
+    font-size: 21px;
+    text-align: left;
+    margin-top: 44px;
+    font-weight: 700;
+    color: #000000;
+    font-family: Roboto;
+}
+
+.about-text p{
+    display: inline;
+}
+
+.career img{
+    width: 100%;
+    margin-top: 10px;
+    position: relative;
+}
+
+.career-item{
+    position: absolute;
+    top: calc(51% - 7px);
+    padding: 36px;
+    left: 214px;
+    width: 296px;
+    height: 202px;
+    background-color: #FFFFFF;
+}
+
+.career-item-title{
+    color: var(--unnamed-color-131e32);
+    text-align: left;
+    font: normal normal bold 31px/0px Roboto;
+    letter-spacing: -2px;
+    opacity: 1;
+} 
+
+.career-item-text{
+    margin-top: 25px;
+    display: block;
+    text-align: left;
+    font: normal normal normal 14px/29px Roboto;
+    letter-spacing: 0px;
+    color: #8b8b8b;
+    opacity: 1;
+    font-weight: 500;
 }
