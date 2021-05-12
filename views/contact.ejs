@@ -30,8 +30,7 @@
                     <div class="left-part">
                         <div class="left-item">
                             <h1>Əlaqə</h1>
-                            <img src="img/img14.png" alt="">
-                        </div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.3058292532796!2d49.876508114932506!3d40.37991397936942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307ce1e5959b69%3A0x6f2eb5b63b2f56d1!2sAMAY%20Shopping%20Center!5e0!3m2!1str!2s!4v1620821089247!5m2!1str!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                        </div>
                         <div class="left-part-text">
                             <h2>23 Nobel Prospekti, Bakı 1000, Azərbaycan</h2>
                             <h2>+994 00 000 00 00</h2>
@@ -46,7 +45,7 @@
                             <p>Rəyləriniz bizim üçün çox vacibdir. Düşüncələriniz, suallarınız, xüsusiyyət istəkləriniz və ya səhv hesabatlarınızla bizə mesaj göndərməkdən çəkinməyin.</p>
                        </div>
                         <div class="right-register">
-                            <form action="/contact" method="POST" class="">
+                            <form action="/" method="" class="">
                                 <div>
                                     <label for="" class="form-label">Ad</label>
                                     <input type="username" placeholder="Adınızı daxil edin" name="name" class="username-input">
@@ -68,7 +67,7 @@
                                     <div data-error="text"></div>
                                 </div>
                                 <div class="form-button">
-                                    <button type="submit">Göndərin</button>
+                                    <button onclick="alert" type="submit">Göndərin</button>
                                 </div>
                             </form> 
                         </div>
@@ -78,34 +77,15 @@
         </div>
     </section>
     <!------ left-right-end ------>
-
+<script>
+    function alert() {
+        alert('alert')
+    }
+</script>
 
          <!------ footer-start ------>
-         <footer>
-            <div class="col-lg-12">
-                <div class="container">
-                    <div class="col-md-12 col-lg-12 col-12 col-xs-12 footer-down">
-                        <div class="container">
-                            <div class="d-flex">
-                                <div class="footer-down-left">
-                                    <p class="footer-down-title">© 2021 self.az</p>
-                                </div>
-                                <div class="footer-down-right">
-                                    <ul>
-                                        <li><a href="">Haqqımızda</a></li>
-                                        <li><a href="">Blog</a></li>
-                                        <li><a href="">Portfolio</a></li>
-                                        <li><a href="">Xidmətlərimiz</a></li>
-                                        <li><a href="">Karyera</a></li>
-                                        <li><a href="">Əlaqə</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+         <%- include('./footer.ejs') %>    
+
      <!------ footer-end ------>
 
 

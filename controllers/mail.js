@@ -26,6 +26,6 @@ async function sendMail(req,res) {
                   console.log('Email sent: ' + info.response);
                 }
               });
-             res.send('email babx')
+             res.redirect('/contact');
 }
 module.exports = sendMail;
