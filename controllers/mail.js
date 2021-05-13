@@ -5,7 +5,9 @@ const {USER,PASS} = process.env;
 async function sendMail(req,res) {
     const {email,name,tell,message} = req.body;
               const transporter = nodemailer.createTransport({
-                service: 'gmail',
+                host:"mail.self.az",
+                port: 465,
+                secure: true,
                 auth: {
                   user: USER,
                   pass: PASS 
@@ -13,7 +15,7 @@ async function sendMail(req,res) {
               });
               const mailOptions = {
                 from: USER,
-                to: userEmail,
+                to: email,
                 subject: 'New Message from Self.az',
                 text: `${message} by ${name} 
                 email: ${email}
