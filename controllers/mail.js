@@ -2,7 +2,7 @@
 const nodemailer = require('nodemailer');
 const dotenv = require('dotenv').config();
 const {USER,PASS} = process.env;
-async function sendMail(req,res) {
+ function sendMail(req,res) {
     const {email,name,tell,message} = req.body;
               const transporter = nodemailer.createTransport({
                 host:"mail.self.az",
@@ -17,9 +17,10 @@ async function sendMail(req,res) {
                 from: USER,
                 to: email,
                 subject: 'New Message from Self.az',
-                text: `${message} by ${name} 
+                text: `${name} 
                 email: ${email}
-                tell: ${tell}`,
+                tell: ${tell}
+                message ${message}`,
               };
               transporter.sendMail(mailOptions, function(error, info){
                 if (error) {
