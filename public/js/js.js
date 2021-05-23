@@ -8,9 +8,10 @@ $(function () {
 // }
 
 
-$(document).ready(function() {
-    $('.about img').animate({left:'250'},2000);
-});
+// $(document).ready(function() {
+//     $('.about img').animate({left:'250'},2000);
+// });
+
 
 
 });   
