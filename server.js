@@ -8,6 +8,21 @@ const conn = require('./helpers/db');
 const compression = require('compression');
 var helmet = require('helmet');
 connection = new conn;
+const flash = require('express-flash');
+const passport = require('passport');
+const Admin = require('./models/admin');
+var LocalStrategy = require('passport-local').Strategy;
+app.use(flash());
+app.use(require('express-session')({
+   secret: "secret key",
+   resave: false,
+   saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(Admin.authenticate()));
+passport.serializeUser(Admin.serializeUser());
+passport.deserializeUser(Admin.deserializeUser());
 app.set('views', path.join(__dirname, '/views'));
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');

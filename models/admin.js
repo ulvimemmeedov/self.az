@@ -24,5 +24,5 @@ AdminSchema.plugin(passportLocalMongoose);
 
 const Admin =  connection.model("Admin",AdminSchema);
 
-module.exports = {Admin,connection};
+module.exports = Admin;
 
