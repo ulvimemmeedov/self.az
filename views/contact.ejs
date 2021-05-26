@@ -17,9 +17,9 @@
 <body>
 
     <!------ header-start ------>
-    <%- include('./header.ejs') %>    
+    <%- include('header'); -%>
 
-    <!------ header-end ------->
+<!------ header-end ------->
 
 
     <!------ left-right-start ------>
@@ -30,7 +30,8 @@
                     <div class="left-part">
                         <div class="left-item">
                             <h1>Əlaqə</h1>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.3058292532796!2d49.876508114932506!3d40.37991397936942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307ce1e5959b69%3A0x6f2eb5b63b2f56d1!2sAMAY%20Shopping%20Center!5e0!3m2!1str!2s!4v1620821089247!5m2!1str!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                        </div>
+                            <img src="img/img14.png" alt="">
+                        </div>
                         <div class="left-part-text">
                             <h2>23 Nobel Prospekti, Bakı 1000, Azərbaycan</h2>
                             <h2>+994 00 000 00 00</h2>
@@ -45,15 +46,15 @@
                             <p>Rəyləriniz bizim üçün çox vacibdir. Düşüncələriniz, suallarınız, xüsusiyyət istəkləriniz və ya səhv hesabatlarınızla bizə mesaj göndərməkdən çəkinməyin.</p>
                        </div>
                         <div class="right-register">
-                            <form action="/contact" method="POST" class="">
+                            <form action="" method="POST" class="">
                                 <div>
                                     <label for="" class="form-label">Ad</label>
-                                    <input type="username" placeholder="Adınızı daxil edin" name="name" class="username-input">
+                                    <input type="username" placeholder="Adınızı daxil edin" name="username" class="username-input">
                                     <div data-error="username"></div>
                                 </div>
                                 <div>
                                     <label for="" class="form-label">Tel:</label>
-                                    <input type="tel" placeholder="Əlaqə nömrənizi daxil edin" name="tell" class="username-input">
+                                    <input type="tel" placeholder="Əlaqə nömrənizi daxil edin" name="tel" class="username-input">
                                     <div data-error="tel"></div>
                                 </div>
                                 <div>
@@ -63,11 +64,11 @@
                                 </div>
                                 <div>
                                     <label for="" class="form-label">Mesaj</label>
-                                    <textarea id="text" name="message" rows="8" cols="50" class="username-input"></textarea>
+                                    <textarea id="text" name="text" rows="8" cols="50" class="username-input"></textarea>
                                     <div data-error="text"></div>
                                 </div>
                                 <div class="form-button">
-                                    <button onclick="alert" type="submit">Göndərin</button>
+                                    <button type="submit">Göndərin</button>
                                 </div>
                             </form> 
                         </div>
@@ -77,16 +78,12 @@
         </div>
     </section>
     <!------ left-right-end ------>
-<script>
-    function alert() {
-        alert('alert')
-    }
-</script>
 
-         <!------ footer-start ------>
-         <%- include('./footer.ejs') %>    
 
-     <!------ footer-end ------>
+    <!------ footer-start ------>
+    <%- include('footer'); -%>
+
+    <!------ footer-end ------>
 
 
     <script src="js/jquery-3.4.1.min.js"></script>

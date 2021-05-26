@@ -676,7 +676,7 @@
 .packages-mail{
     background-color: #131E32;
     margin-top: 1px;
-    width: 220%;
+    width: 540px;
     height: 250px;
 }
 
@@ -684,11 +684,55 @@
     color: #7a7a7a;
     text-align: center;
     display: inline-block;
-    font-size: 45px;
+    font-size: 46px;
     font-family: Roboto;
     font-weight: 600;
     width: 0px;
     position: relative;
-    line-height: 38px;
+    line-height: 40px;
     top: 40px;
+    left: 35%;
+}
+
+.packages-mail p{
+    color: #7a7a7a;
+    font-size: 52px;
+    font-weight: 600;
+    font-family: Roboto;
+    margin-top: 45px;
+    position: absolute;
+    left: 197px;
+}
+
+.packages-mail2{
+    background-color: #131E32;
+    margin-top: 1px;
+    width: 549px;
+    height: 250px;
+    margin-left: -4px;
+    position: relative;
+}
+
+.packages-mail2 h1{
+    color: #7a7a7a;
+    text-align: center;
+    display: inline-block;
+    font-size: 46px;
+    font-family: Roboto;
+    font-weight: 600;
+    width: 0px;
+    position: relative;
+    line-height: 40px;
+    top: 40px;
+    left: 35%;
+}
+
+.packages-mail2 p{
+    color: #7a7a7a;
+    font-size: 52px;
+    font-weight: 600;
+    font-family: Roboto;
+    margin-top: 45px;
+    position: absolute;
+    left: 188px;
 }

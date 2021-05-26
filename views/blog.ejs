@@ -16,10 +16,10 @@
 
 <body>
 
-    <!------ header-start ------>
-    <%- include('./header.ejs') %>    
+<!------ header-start ------>
+<%- include('header'); -%>
 
-    <!------ header-end ------->
+<!------ header-end ------->
     
 
     <!------ popular-product-start ------>
@@ -30,15 +30,21 @@
                     <div class="popular-product-left">
                         <div class="popular-product-item">
                             <h1>Gündəmdə</h1>
-                            <img src="img/img15.png" alt="">
+                            <a href="single-blog1.html">
+                                <img src="img/img15.png" alt="">
+                            </a>
                         </div>
                         <div class="popular-product-date">
                             <p>Apr 27</p>
                             <span>15:30</span>
                         </div>
                         <div class="popular-product-text">
-                            <h2>İnterfeysi dizaynı üçün qaydalar</h2>
-                            <p>İstifadəçi interfeysi dizayn nümunələrinin "niyə" və psixologiyasını</p>
+                            <a href="single-blog1.html">
+                                <h2>İnterfeysi dizaynı üçün qaydalar</h2>
+                            </a>
+                            <a href="single-blog1.html">
+                                <p>İstifadəçi interfeysi dizayn nümunələrinin "niyə" və psixologiyasını</p>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -46,22 +52,28 @@
                 <div class="col-md-6 col-lg-6 col-12 col-xs-12">
                     <div class="popular-product-right">
                         <div class="popular-product-item2">
-                            <img src="img/img16.png" alt="">
+                            <a href="single-blog2.html">
+                                <img src="img/img16.png" alt="">
+                            </a>
                         </div>
                         <div class="popular-product-date">
                             <p>Apr 27</p>
                             <span>15:30</span>
                         </div>
                         <div class="popular-product-text">
+                           <a href="single-blog2.html">
                             <h2>İnterfeysi dizaynı üçün psixologiya</h2>
-                            <p>İnandırıcı dizayn sənətini öyrənmək istəyən dizaynerlər üçün.</p>
+                           </a>
+                            <a href="single-blog2.html">
+                                <p>İnandırıcı dizayn sənətini öyrənmək istəyən dizaynerlər üçün.</p>
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="popular-product-projects">
                     <img src="img/img17.png" alt="">
-                    <h1>Yüklə</h1>
+                    <a href="">Yüklə</a>
                 </div>
 
             </div>
@@ -71,7 +83,7 @@
 
     
     <!------ footer-start ------>
-    <%- include('./footer.ejs') %>    
+    <%- include('footer'); -%>
 
      <!------ footer-end ------>
 
