@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/slick.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!------ header-start ------>
+    <%- include('header'); -%>
+
+    <!------ header-end ------->
+
+
+    <!------ packages-start ------>
+    <section>
+        <div class="container">
+            <div class="packages">
+                <div class="packages-square">
+                    <h1>əlavə</h1>
+                    <p>paketlər</p>
+                </div>
+                    <div class="row">
+                        <% find.forEach(element => { %>
+                            <div class="col-md-6 col-12">
+                                <div class="packages-mail">
+                                    <h1><%= element.name %></h1>
+                                    <p> <%= element.price %> </p>
+                                    <p><%= element.des %></p>
+                                </div>
+                            </div>
+                        <%  });  %>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <!------ packages-start ------>
+
+
+    <!------ footer-start ------>
+    <%- include('footer'); -%>
+
+    <!------ footer-end ------>
+
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/slick.min.js"></script>
+    <script src="/js/6920cc4a68.js"></script>
+    <script src="/js/js.js"></script>
+</body>
+
+</html>

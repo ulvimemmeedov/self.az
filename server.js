@@ -5,8 +5,7 @@ const services = require('./routers/services')
 const path = require('path');
 const dotenv = require('dotenv').config()
 const conn = require('./helpers/db');
-const compression = require('compression');
-var helmet = require('helmet');
+const helmet = require('helmet');
 connection = new conn;
 const flash = require('express-flash');
 const passport = require('passport');
@@ -24,10 +23,12 @@ passport.use(new LocalStrategy(Admin.authenticate()));
 passport.serializeUser(Admin.serializeUser());
 passport.deserializeUser(Admin.deserializeUser());
 app.set('views', path.join(__dirname, '/views'));
-app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 app.use(helmet());
-app.use(compression());
+app.use(express.static(__dirname + '/public'));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use('/',router);
+
+
 app.listen(process.env.PORT||2000,console.log('app runing :',process.env.PORT));

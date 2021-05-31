@@ -4,5 +4,12 @@ function CheckLogin (req, res, next) {
     }
     res.redirect('/admin/login')
    };
-module.exports=CheckLogin;
+
+function CheckLogout (req,res,next) {
+        if (req.isAuthenticated()) {
+          return res.redirect('/admin')
+        }
+        next()
+      }
+module.exports={CheckLogin,CheckLogout};
     

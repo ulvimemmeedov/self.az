@@ -7,23 +7,19 @@ const connection = mongoose.createConnection(process.env.ATLAS,{ useNewUrlParser
     useUnifiedTopology:true});
 
     
-const PostsSchema = new Schema({
-    title:{ 
-        type: String
+const WebSchema = new Schema({
+    name:{ 
+        type: String,
     },
-    image:{
-        type:String
+    price:{ 
+        type: String,
     },
-    content:{ 
-        type: String
-    },
-    date:{
+    des:{
         type:String,
-        default: Date
     }
 });
 
-const Posts =  connection.model("Posts",PostsSchema);
+const webServices =  connection.model("Web",WebSchema);
 
-module.exports = Posts;
+module.exports = webServices;
 

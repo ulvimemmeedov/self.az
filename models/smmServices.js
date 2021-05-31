@@ -7,7 +7,7 @@ const connection = mongoose.createConnection(process.env.ATLAS,{ useNewUrlParser
     useUnifiedTopology:true});
 
     
-const ServicesSchema = new Schema({
+const SmmSchema = new Schema({
     name:{ 
         type: String,
     },
@@ -19,7 +19,7 @@ const ServicesSchema = new Schema({
     }
 });
 
-const Services =  connection.model("Services",ServicesSchema);
+const smmServices =  connection.model("Smm",SmmSchema);
 
-module.exports = Services;
+module.exports = smmServices;
 

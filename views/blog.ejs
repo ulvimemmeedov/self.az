@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/slick.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 </head>
 
@@ -27,52 +27,38 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-lg-6 col-12 col-xs-12">
+                    <h1>Gündəmdə</h1>
+
+                    <!-- foreach -->
+                    <% find.forEach(element => { %>
                     <div class="popular-product-left">
                         <div class="popular-product-item">
-                            <h1>Gündəmdə</h1>
-                            <a href="single-blog1.html">
-                                <img src="img/img15.png" alt="">
+                            <a href="/blog/<%= element.title %>/<%= element.date %>">
+                                <img src="/image/<%= element.image %>" alt="">
                             </a>
                         </div>
                         <div class="popular-product-date">
-                            <p>Apr 27</p>
-                            <span>15:30</span>
+                            <p><%= element.date[16]%><%= element.date[17]%><%= element.date[18]%><%= element.date[19]%><%= element.date[20]%></p>
+                            <span><%= element.date[4] %><%= element.date[5] %><%= element.date[6] %><%= element.date[7] %><%= element.date[8] %><%= element.date[9] %></span>
                         </div>
                         <div class="popular-product-text">
-                            <a href="single-blog1.html">
-                                <h2>İnterfeysi dizaynı üçün qaydalar</h2>
+                            <a href="/blog/<%= element.title %>/<%= element.date %>">
+                                <h2> <%= element.title %> </h2>
                             </a>
-                            <a href="single-blog1.html">
-                                <p>İstifadəçi interfeysi dizayn nümunələrinin "niyə" və psixologiyasını</p>
+                            <a href="/blog/<%= element.title %>/<%= element.date %>">
+                                <p><%= element.content %></p>
                             </a>
                         </div>
                     </div>
-                </div>
+                    <hr>
+                    <%  });  %>
 
-                <div class="col-md-6 col-lg-6 col-12 col-xs-12">
-                    <div class="popular-product-right">
-                        <div class="popular-product-item2">
-                            <a href="single-blog2.html">
-                                <img src="img/img16.png" alt="">
-                            </a>
-                        </div>
-                        <div class="popular-product-date">
-                            <p>Apr 27</p>
-                            <span>15:30</span>
-                        </div>
-                        <div class="popular-product-text">
-                           <a href="single-blog2.html">
-                            <h2>İnterfeysi dizaynı üçün psixologiya</h2>
-                           </a>
-                            <a href="single-blog2.html">
-                                <p>İnandırıcı dizayn sənətini öyrənmək istəyən dizaynerlər üçün.</p>
-                            </a>
-                        </div>
-                    </div>
+                    <!-- foreach -->
+                    
                 </div>
 
                 <div class="popular-product-projects">
-                    <img src="img/img17.png" alt="">
+                    <img src="/img/img17.png" alt="">
                     <a href="">Yüklə</a>
                 </div>
 
@@ -88,11 +74,11 @@
      <!------ footer-end ------>
 
 
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/6920cc4a68.js"></script>
-    <script src="js/js.js"></script>
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/slick.min.js"></script>
+    <script src="/js/6920cc4a68.js"></script>
+    <script src="/js/js.js"></script>
 </body>
 
 </html>

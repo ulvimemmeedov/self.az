@@ -23,9 +23,6 @@ router.get('/',(req,res,next)=>{
 .get('/blog',(req,res,next)=>{
     res.render('blog');
 })
-.get('/packages',(req,res,next)=>{
-    res.render('packages');
-})
 .post('/contact',mail)
 .get('/*',(req,res)=>{
     res.render('notfound')

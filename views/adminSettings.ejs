@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="/assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/libs/css/style.css">
+    <link rel="stylesheet" href="/assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="/assets/vendor/charts/chartist-bundle/chartist.css">
+    <link rel="stylesheet" href="/assets/vendor/charts/morris-bundle/morris.css">
+    <link rel="stylesheet" href="/assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/assets/vendor/charts/c3charts/c3.css">
+    <link rel="stylesheet" href="/assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
+    <title>Admin panel</title>
+</head>
+
+<body>
+
+
+    <div class="dashboard-main-wrapper">
+        <div class="dashboard-header">
+            <nav class="navbar navbar-expand-lg bg-white fixed-top">
+                <a class="navbar-brand" href="/">Self.az</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                           <img src="/assets/images/self_logo1.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="dashboard-main-wrapper">                                <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#exampleModal">
+                admin settings
+            </button>
+    
+            <!-- Modal -->
+       
+
+        <div class="nav-left-sidebar sidebar-dark">
+            <div class="menu-list">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-divider">
+                                Menu
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="/"><i class="fa fa-fw fa-user-circle"></i>Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/admin/package"><i class="fa fa-fw fa-rocket"></i>Package</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/admin/settings"><i class="fa fa-fw fa-rocket"></i>Settings</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+   
+        <div class="nav-left-sidebar sidebar-dark">
+            <div class="menu-list">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="d-xl-none d-lg-none" href="/">Self.az</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-divider">
+                                Menu
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="/admin/"><i class="fa fa-fw fa-user-circle"></i>Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/admin/package"><i class="fa fa-fw fa-rocket"></i>Package</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/admin/settings"><i class="fa fa-fw fa-rocket"></i>Settings</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            
+        </div>
+
+
+    <div>
+    </div>
+    <div class="dashboard-wrapper">
+        <div class="dashboard-ecommerce">
+            <div class="container-fluid dashboard-content">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModal">
+                                admin
+                            </button>
+                    </div>
+                </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">add admin</h5>
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="/admin/register"">
+                    <input type="text" class="fadeIn second" name="username" placeholder="username">
+                    <input type="password" class="fadeIn third" name="password" placeholder="password">
+                    <input type="submit" class="fadeIn fourth" value="add">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary"
+                    data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="/assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <script src="/assets/libs/js/main-js.js"></script>
+    <script src="/assets/vendor/charts/chartist-bundle/chartist.min.js"></script>
+    <script src="/assets/vendor/charts/sparkline/jquery.sparkline.js"></script>
+    <script src="/assets/vendor/charts/morris-bundle/raphael.min.js"></script>
+    <script src="/assets/vendor/charts/morris-bundle/morris.js"></script>
+    <script src="/assets/vendor/charts/c3charts/c3.min.js"></script>
+    <script src="/assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
+    <script src="/assets/vendor/charts/c3charts/C3chartjs.js"></script>
+    <script src="/assets/libs/js/dashboard-ecommerce.js"></script>
+</body>
+ 
+</html>

@@ -1,37 +1,56 @@
 const mongoose = require("mongoose");
 const passport = require("passport");
 const Admin = require("../models/admin");
-
+const posts = require('../models/post');
+const webPackage = require('../models/webServices');
+const smmPackage = require('../models/smmServices');
+const otherPackage = require('../models/otherServices');
+var weball = [];
+var smmall = [];
+var otherall = [];
 var adminController = {};
 
-adminController.home = function(req, res) {
-        res.render("admin")
+adminController.home = async function(req, res) {
+       const post = await posts.find();
+
+        res.render("admin",{post})
   };
-  adminController.package = function(req, res) {
-    res.render("adminPackage")
+  adminController.package = async function(req, res) {
+    const web = await webPackage.find({});
+    weball = web;
+    const smm = await smmPackage.find({});
+    smmall = smm;
+    const other = await otherPackage.find({});
+    otherall = other;
+    res.render("adminPackage",{weball,smmall,otherall});
 };
-adminController.newPackage = function(req, res) {
-  res.render("newPackage")
+adminController.settings = function(req, res) {
+  res.render("adminSettings")
 };
-adminController.doRegister = function(req, res) {
+adminController.doRegister = async function(req, res) {
     const {username,password} = req.body;
-  Admin.register(new Admin({username}),password, function(err, user) {
+  await Admin.register(new Admin({username}),password, function(err, user) {
     if (err) {
-      return res.json();
+      return res.json(err);
     }
-Admin.register
+ Admin.register
     passport.authenticate('local')(req, res, function () {
-      res.redirect('/admin');
+      res.redirect('/admin/settings');
     });
   });
 };
 adminController.login = function(req, res) {
-    res.send('hello');
+    res.render('login');
   };
 adminController.doLogin = function(req, res) {
+try {
   passport.authenticate('local')(req, res, function () {
-    res.redirect('/admin');
+    res.status(200).redirect('/admin');
   });
+} catch (error) {
+  res.send(error)
+}
+
 };
 
 adminController.logout = function(req, res) {

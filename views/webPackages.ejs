@@ -8,10 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/slick.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 </head>
 
@@ -32,18 +32,15 @@
                     <p>paketləri</p>
                 </div>
                     <div class="row">
-                        <div class="col-md-6 col-12">
-                            <div class="packages-mail">
-                                <h1>mail hosting</h1>
-                                <p>400 m</p>
+                        <% find.forEach(element => { %>
+                            <div class="col-md-6 col-12">
+                                <div class="packages-mail">
+                                    <h1><%= element.name %></h1>
+                                    <p> <%= element.price %> </p>
+                                    <p><%= element.des %></p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 col-12">
-                            <div class="packages-mail2">
-                                <h1>mail hosting</h1>
-                                <p>400 m</p>
-                            </div>
-                        </div>
+                        <%  });  %>
                     </div>
             </div>
         </div>
@@ -57,11 +54,11 @@
     <!------ footer-end ------>
 
 
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/6920cc4a68.js"></script>
-    <script src="js/js.js"></script>
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/slick.min.js"></script>
+    <script src="/js/6920cc4a68.js"></script>
+    <script src="/js/js.js"></script>
 </body>
 
 </html>
