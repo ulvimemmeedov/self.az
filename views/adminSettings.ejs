@@ -133,6 +133,21 @@
                     <input type="submit" class="fadeIn fourth" value="add">
                 </form>
             </div>
+            <h1>change password</h1>
+            <div class="row">
+                <% adminall.forEach(element => { %>
+                    <div class="col-md-6 col-12">
+                        <div class="packages-mail">
+                            <h1><%= element.username %></h1>
+                        </div>
+                    </div>
+                <%  });  %>
+            </div>
+            <form method="POST" action="/admin/register"">
+                <input type="text" class="fadeIn second" name="username" placeholder="username">
+                <input type="password" class="fadeIn third" name="password" placeholder="password">
+                <input type="submit" class="fadeIn fourth" value="add">
+            </form>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary"
                     data-dismiss="modal">Close</button>

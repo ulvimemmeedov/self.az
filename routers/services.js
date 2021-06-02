@@ -3,6 +3,7 @@ const router = express.Router();
 const WebServices = require('../controllers/webServices');
 const SmmServices = require('../controllers/smmService');
 const OtherServices = require('../controllers/otherServices');
+const HostingServices = require('../controllers/hostingServices');
 const {CheckLogin} = require('../middleware/auth');
 
 
@@ -18,5 +19,9 @@ router.get('/smm',SmmServices.All)
 router.get('/other',OtherServices.All)
 .post('/other/create',CheckLogin,OtherServices.Create)
 .post('/other/delete/:id',CheckLogin,OtherServices.Delete)
+// hosting
+router.get('/hosting',HostingServices.All)
+.post('/hosting/create',CheckLogin,HostingServices.Create)
+.post('/hosting/delete/:id',CheckLogin,HostingServices.Delete)
 
 module.exports= router;

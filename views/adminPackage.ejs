@@ -104,6 +104,37 @@
                                         </thead>
                                         <tbody>
                                            <div>
+                                               <h1>Hosting package</h1>
+                                               <% hostingall.forEach(element => { %>
+                                                <tr class="element._id" >
+                                                    <td><%= element.name %></td>
+                                                    <td><%= element.price %></td>
+                                                    <td><%= element.des %></td>
+                                                    <td><form action="/services/hosting/delete/<%=element.id%>" method="post">
+                                                        <button type="submit" style="color: red;" >X</button>
+                                                    </form></td>
+                                                </tr>
+                                                <%  });  %>
+                                           </div>
+                                            <br>
+                                            
+                                        </tbody>
+                            
+                                    </table>
+                                </div>
+                                <br>
+                                <div class="col-md-6">
+                                    <table class="table">
+                                        <thead class="bg-light">
+                                            <tr class="border-0">
+                                                <th class="border-0">name</th>
+                                                <th class="border-0">price</th>
+                                                <th class="border-0">description</th>
+                                                <th class="border-0" style="color: red;" >Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                           <div>
                                                <h1>web package</h1>
                                                <% weball.forEach(element => { %>
                                                 <tr class="element._id" >
@@ -225,6 +256,14 @@
                             <br>
                             <h1>other package</h1>
                             <form method="POST" action="/services/other/create">
+                                <input name="name" type="text" placeholder="name">
+                                <input name="price" type="text" placeholder="price">
+                                <input name="des" type="text" placeholder="description">
+                                <button type="submit" class="btn btn-primary fadeIn fourth" >add</button>
+                            </form>
+                            <br>
+                            <h1>hosting package</h1>
+                            <form method="POST" action="/services/hosting/create">
                                 <input name="name" type="text" placeholder="name">
                                 <input name="price" type="text" placeholder="price">
                                 <input name="des" type="text" placeholder="description">

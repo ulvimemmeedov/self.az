@@ -5,9 +5,7 @@ const {USER,PASS} = process.env;
  function sendMail(req,res) {
     const {email,name,tell,message} = req.body;
               const transporter = nodemailer.createTransport({
-                host:"mail.self.az",
-                port: 465,
-                secure: true,
+                service:'gmail',
                 auth: {
                   user: USER,
                   pass: PASS 

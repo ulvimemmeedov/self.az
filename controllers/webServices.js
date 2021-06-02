@@ -2,8 +2,13 @@ const web = require('../models/webServices');
 const WebServices = {}
 
 WebServices.All = async (req,res) => {
-  const find = await web.find({});
-  res.render('webPackages',{find});
+  try {
+    const find = await web.find({});
+    res.render('webPackages',{find});
+
+  } catch (error) {
+    res.render('error')
+  }
 };
 
 WebServices.Create= async (req, res, next) => {

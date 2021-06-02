@@ -1,8 +1,13 @@
 const smm = require('../models/smmServices');
 const SmmServices = {}
 SmmServices.All = async (req,res,next) => {
-  const find = await smm.find();
-  res.render('smmPackage',{find});
+  try {
+    const find = await smm.find();
+    res.render('smmPackage',{find});
+
+  } catch (error) {
+    res.render('error')
+  }
 };
 SmmServices.Create= async (req, res, next) => {
   const {name,price,des} = req.body;
@@ -12,7 +17,7 @@ SmmServices.Create= async (req, res, next) => {
         price,
         des
     });
-    res.json(service);
+    res.redirect('/admin/package');
   } catch (error) {
     next(error);
   };

@@ -2,8 +2,13 @@ const other = require('../models/otherServices');
 const OtherServices = {}
 
 OtherServices.All = async (req,res,next) => {
-  const find = await other.find();
-  res.render('otherPackage',{find});
+  try {
+    const find = await other.find();
+    res.render('otherPackage',{find});
+
+  } catch (error) {
+    res.render('error')
+  }
 };
 OtherServices.Create= async (req, res, next) => {
   const {name,price,des} = req.body;
