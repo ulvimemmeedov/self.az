@@ -681,44 +681,36 @@
 .packages-mail{
     background-color: #131E32;
     margin-top: 1px;
-    width: 540px;
-    height: 250px;
+    width: 544px;
+    height: 340px;
+    
 }
 
 .packages-mail h1{
     color: #7a7a7a;
     text-align: center;
     display: inline-block;
-    font-size: 46px;
+    font-size: 28px;
     font-family: Roboto;
     font-weight: 600;
     width: 0px;
     position: relative;
-    line-height: 40px;
-    top: 40px;
-    left: 35%;
+    line-height: 27px;
+    top: 44px;
+    left: 120px;
 }
 
 .packages-mail p{
     color: #7a7a7a;
-    font-size: 52px;
+    font-size: 18px;
     font-weight: 600;
     font-family: Roboto;
-    line-height: 39px;
-    margin-left: 180px;
+    line-height: 20px;
+    margin-left: 179px;
     position: relative;
-    top: 64px;
-/* 
-    color: #7a7a7a;
-    font-size: 52px;
-    font-weight: 600;
-    font-family: Roboto;
-    margin-top: 45px;
-    position: absolute;
-    left: 197px; */
+    top: 58px;
+    right: 60px;
 }
-
-
 
 .packages-mail2{
     background-color: #131E32;
