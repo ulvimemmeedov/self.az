@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const blogs = require('../controllers/blog');
 const { upload } = require('../uploadhelper');
-const {CheckLogin} = require('../middleware/auth');
+const CheckLogin = require('../middleware/auth');
 
 router.get('/',blogs.all)
 .get('/:title/:date',blogs.one)

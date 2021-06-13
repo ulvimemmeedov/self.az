@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mail = require('../controllers/mail');
 
-router.get('/',(req,res,next)=>{
+router.get('/home',(req,res,next)=>{
     res.render('index');
 })
 .get('/about',(req,res,next)=>{
@@ -25,6 +25,6 @@ router.get('/',(req,res,next)=>{
 })
 .post('/contact',mail)
 .get('/*',(req,res)=>{
-    res.render('notfound')
+    res.redirect('/home')
 })
 module.exports = router;

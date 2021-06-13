@@ -267,12 +267,15 @@ input[type=text]:placeholder {
 }
 
 </style>
+
 <div class="wrapper fadeInDown">
   <div id="formContent">
-
-    <form method="POST" action="/admin/login">
+    <%if (message.length > 0) { %>
+      <span><%= message %></span> 
+      <% } %>
+      <form method="POST" action="/admin/login">
         <div class="form-group">
-          <input type="email" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
         </div>
         <div class="form-group">
           <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">

@@ -4,7 +4,7 @@ const WebServices = require('../controllers/webServices');
 const SmmServices = require('../controllers/smmService');
 const OtherServices = require('../controllers/otherServices');
 const HostingServices = require('../controllers/hostingServices');
-const {CheckLogin} = require('../middleware/auth');
+const CheckLogin = require('../middleware/auth');
 
 
 // web

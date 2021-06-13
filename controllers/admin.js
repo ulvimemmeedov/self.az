@@ -6,6 +6,9 @@ const webPackage = require('../models/webServices');
 const smmPackage = require('../models/smmServices');
 const otherPackage = require('../models/otherServices');
 const hostingPackage = require('../models/hostingServices');
+const jwt = require("jsonwebtoken");
+const { validationResult } = require("express-validator");
+const bcrypt = require("bcryptjs");
 var weball = [];
 var smmall = [];
 var otherall = [];
@@ -34,41 +37,111 @@ adminController.settings = async function(req, res) {
   adminall = admin;
   res.render("adminSettings",{adminall});
 };
-adminController.doRegister = async function(req, res) {
-    const {username,password} = req.body;
-  await Admin.register(new Admin({username}),password, function(err, user) {
-    if (err) {
-      return res.json(err);
-    }
-    Admin.register
-    passport.authenticate('local')(req, res, function () {
-      res.redirect('/admin/settings');
+adminController.doRegister = async (req, res, next) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({
+      errors: errors.array(),
     });
-  });
+  }
+
+  const { email, password } = req.body;
+  try {
+    let admin = await Admin.findOne({
+      email,
+    });
+    if (admin) {
+      return res.status(400).json({
+        msg: "İstifadəçi Artıq Mövcuddur",
+      });
+    }
+
+    admin = new Admin({
+      email,
+      password,
+    });
+
+    const salt = await bcrypt.genSalt(10);
+    admin.password = await bcrypt.hash(password, salt);
+
+    await admin.save();
+
+    const payload = {
+      admin: {
+        id: admin.id,
+      },
+    };
+
+    jwt.sign(
+      payload,
+      "randomString",
+      {
+        expiresIn: 10000,
+      },
+      (err, token) => {
+        if (err) throw err;
+        res.status(200).cookie('token', token).json('Uğurla Qeydiyyatdan Keçdiniz');
+      }
+    );
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Yadda saxlama xətası");
+  }
 };
 adminController.login = function(req, res) {
-    res.render('login');
-  };
-adminController.doLogin = function(req, res) {
-try {
-  passport.authenticate('local')(req, res, function () {
-    res.status(200).redirect('/admin');
-  });
-} catch (error) {
-  res.render('error');
-};
-
-};
-adminController.doLogin = function(req, res) {
-  try {
-    passport.authenticate('local')(req, res, function () {
-      res.status(200).redirect('/admin');
+    res.render('login',      {
+      message: "giriş edin"
     });
-  } catch (error) {
-    res.render('error');
   };
-  
-  };
+adminController.doLogin = async function (req, res) {
+  const errors = validationResult(req);
+
+  if (!errors.isEmpty()) {
+    return res.status(400).json({
+      errors: errors.array()
+    });
+  }
+
+  const { email, password } = req.body;
+  try {
+    let admin = await Admin.findOne({
+      email
+    });
+    if (!admin)
+      return res.status(400).render('login',{
+        message: "İstifadəçi mövcud deyil"
+      });
+
+    const isMatch = await bcrypt.compare(password, admin.password);
+    if (!isMatch)
+      return res.status(400).render('login',{
+        message: "Səhv Parol!"
+      });
+
+    const payload = {
+      admin: {
+        id: admin.id
+      }
+    };
+    jwt.sign(
+      payload,
+      "randomString",
+      {
+        expiresIn: 3600
+      },
+      (err, token) => {
+        if (err) throw err;
+        res.status(200).cookie("token",token).redirect('/admin');
+      }
+    );
+  } catch (e) {
+    console.error(e);
+    res.status(500).render('login',
+      {
+      message: "Server Error"
+    });
+  }
+};
 
 adminController.logout = function(req, res) {
   req.logout();

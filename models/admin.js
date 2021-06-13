@@ -9,16 +9,14 @@ const connection = mongoose.createConnection(process.env.ATLAS,{ useNewUrlParser
 const passportLocalMongoose = require('passport-local-mongoose');
 
 const AdminSchema = new Schema({
-    username:{ 
+    email:{ 
         type: String,
         unique: true
     },
     role:{type:String,default:"admin"},
     password: String
 });
-AdminSchema.plugin(passportLocalMongoose);
 
 const Admin =  connection.model("Admin",AdminSchema);
-
 module.exports = Admin;
 

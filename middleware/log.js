@@ -1,18 +1,19 @@
 const jwt = require("jsonwebtoken");
 
-function CheckLogin (req, res,next) {
+function Log (req, res,next) {
     const token = req.headers.cookie;
     if (!token || token === undefined) {
-      return res.redirect('/admin/login')
+        next()
     };
   
     try {
       const decoded = jwt.verify(token.slice(6),'randomString');
       req.user = decoded.user;
-      next()
+      res.redirect('/admin')
     } catch (e) {
-      res.status(200).send("Yanlış Token! Zəhmət Olmasa Yenidən giriş edin");
+        console.log(e);
+      res.status(200).render('login',{message:'xeta baş verdi'});
     }
    };
-module.exports=CheckLogin;
+module.exports=Log;
     
